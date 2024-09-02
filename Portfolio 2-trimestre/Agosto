@@ -1,0 +1,48 @@
+Nessa Avaliação, criei um banco de dados para uma clínica veterinária a partir de uma prova. Desenvolvi tabelas para animais, veterinários, consultas, medicamentos e prescrições de medicamentos. A tabela de animais inclui detalhes como nome, espécie, raça e dono. A tabela de veterinários armazena informações como nome, especialidade e telefone. Configurei a tabela de consultas para registrar as consultas veterinárias, relacionando animais e veterinários. A tabela de medicamentos lista os medicamentos disponíveis, e a tabela de prescrição conecta medicamentos às consultas. foi um metodo pratico para avaliar nosso conhecimento sobre o assunto passado em sala de aula.
+
+
+
+(Atividade feita no PGAdmin)
+
+-- Tabela de Animais
+CREATE TABLE Animais (
+    animal_id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    especie VARCHAR(50) NOT NULL,
+    raca VARCHAR(50) NOT NULL,
+    dono VARCHAR(100) NOT NULL
+);
+
+-- Tabela de Veterinários
+CREATE TABLE Veterinarios (
+    veterinario_id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    especialidade VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20)
+);
+
+-- Tabela de Consultas
+CREATE TABLE Consultas (
+    consulta_id SERIAL PRIMARY KEY,
+    data_consulta DATE NOT NULL,
+    animal_id INT REFERENCES Animais(animal_id) ON DELETE CASCADE,
+    veterinario_id INT REFERENCES Veterinarios(veterinario_id) ON DELETE SET NULL,
+    diagnostico TEXT
+);
+
+-- Tabela de Medicamentos
+CREATE TABLE Medicamentos (
+    medicamento_id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    dosagem VARCHAR(50)
+);
+
+-- Tabela de prescrição de Medicamentos nas Consultas
+CREATE TABLE ConsultaMedicamentos (
+    consulta_id INT REFERENCES Consultas(consulta_id) ON DELETE CASCADE,
+    medicamento_id INT REFERENCES Medicamentos(medicamento_id) ON DELETE CASCADE,
+    PRIMARY KEY (consulta_id, medicamento_id)
+);
+
+
