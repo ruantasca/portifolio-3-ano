@@ -1,0 +1,4 @@
+link para acessar a atividade: " https://github.com/ruantasca/node/tree/main/node "
+
+Nesse dia, configurei um projeto Node.js no VS Code. Inicializei o projeto com npm init -y e instalei express e body-parser.
+Criei um arquivo index.js para importar dependências e configurar a aplicação Express. Adicionei rotas para gerenciar veículos (GET, POST, PUT, DELETE). Finalmente, iniciei o servidor com node index.js e testei as rotas no Postman.
