@@ -1,0 +1,6 @@
+link para acessar a atividade =" https://github.com/ruantasca/dex/tree/main "
+
+Trabalhei em um projeto de uma Pokédex no qual desenvolvi a tela de carregamento (SplashScreen) em React . Utilizei uma API para pré-carregar os dados dos Pokémons.
+Configurei a SplashScreen com uma logo e um fundo em degradê. Durante o carregamento, os dados dos Pokémons foram buscados da API e exibidos na tela inicial após a finalização do carregamento.
+
+
