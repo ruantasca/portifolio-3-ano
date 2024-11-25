@@ -1,3 +1,3 @@
-https://github.com/ruantasca/SpotfakeFullstack
+https://github.com/ruantasca/cypress-teste
 <br/>
-Nessa atividade nosso objetivo foi criar um aplicativo de musica no qual podemos navegar entre artistar e musicas desejaveis alem de poder usar sua propria conta para vincular ao app
+Nessa atividade foi necessario nos fazermos testes com o Cypress no antigo trabalho feito da SA, cuja o objetivo é testar todas as funções para ver se estava devidamente funcional e não apresentava nenhum erro
